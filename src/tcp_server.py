@@ -72,7 +72,7 @@ def exit():
     newconnection.sendall(str.encode(message))
     return "<center>Server shutting down.</center>"
 
-# Starting of threads that <???> and loads webpage.
+# Starting of thread that waits to receive messages from the sensor pi and loads webpage.
 @app.route("/")
 def main():   
     thread = threading.Thread(target=receive_data)
